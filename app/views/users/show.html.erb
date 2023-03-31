@@ -1,0 +1,26 @@
+<div class='cat-cards'>
+<% current_user.groups.each do |group| %>
+  <div class='cat-card'>
+    <%= image_tag url_for(group.icon) if group.icon.attached? %>
+    <%= image_tag "default.png" unless group.icon.attached? %>
+    <p>Name: <%= group.name %></p>
+    <% amount = 0 %>
+    <% group.exchanges.each do |exchange| %>
+      <% amount = amount + exchange.amount %>
+    <% end %>
+    <p>Total amount: <%= amount %></p>
+  </div>
+<% end %>
+</div>
+<button onclick="createCategoryFunction()">Add a new category</button>
+<script>
+  function seePostsFunction(id) {
+     window.location.href = id+"/posts";
+  }
+  function createCategoryFunction() {
+    window.location.href = "/categories/new"
+  }
+  function redirectFunction (id) {
+  window.location.href += "/posts/" + id;
+  }
+</script>

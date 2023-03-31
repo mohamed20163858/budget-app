@@ -122,3 +122,10 @@
   .field label {
     display: block;
   }
+
+  .centrialize {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
