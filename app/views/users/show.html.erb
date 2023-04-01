@@ -1,6 +1,6 @@
 <div class='cat-cards'>
 <% current_user.groups.each do |group| %>
-  <div class='cat-card'>
+  <div class='cat-card' onclick="seeTransactionsFunction(<%=@user.id%>, <%=group.id%>)">
     <%= image_tag url_for(group.icon) if group.icon.attached? %>
     <%= image_tag "default.png" unless group.icon.attached? %>
     <p>Name: <%= group.name %></p>
@@ -14,13 +14,10 @@
 </div>
 <button onclick="createCategoryFunction()">Add a new category</button>
 <script>
-  function seePostsFunction(id) {
-     window.location.href = id+"/posts";
+  function seeTransactionsFunction(user_id, group_id) {
+     window.location.href = '/user/' + user_id + '/transactions/' + group_id;
   }
   function createCategoryFunction() {
     window.location.href = "/categories/new"
-  }
-  function redirectFunction (id) {
-  window.location.href += "/posts/" + id;
   }
 </script>

@@ -1,0 +1,29 @@
+<div class="exchange-title">
+  <p>Name: <%= @group.name %></p>
+  <% amount = 0 %>
+  <% @group.exchanges.each do |exchange| %>
+    <% amount = amount + exchange.amount %>
+  <% end %>
+  <p>Total amount: <%= amount %></p>
+</div>
+<div class="exchange-body">
+  <% @group.exchanges.each do |exchange| %>
+    <div class="exchange-card">
+      <div class="line-1">
+        <p><%= exchange.name %></p>
+        <p>$<%= exchange.amount %></p>
+      </div>
+      <div class="line-2">
+        <p><%= exchange.created_at %></p>
+      </div>
+    </div>
+  <% end %>
+</div>
+<%= link_to "<", user_path(current_user), class: "nav-link" %>
+<button onclick="createTransactionFunction(<%=@group.id%>)">Add a new transaction</button>
+<script>
+function createTransactionFunction(id) {
+    window.location.href = "/transactions/new/" + id
+  }
+</script>
+
