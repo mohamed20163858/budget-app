@@ -14,6 +14,23 @@
  *= require_self
  */
 
+ :root {
+--main-color: #3778c2;
+--second-color: #5fb523;
+--text-color: #434b54;
+--white-color: #ffffff;
+--background-color: #f5f6f8;
+--bold-weight: 800;
+--light-weight: 300;
+ }
+
+ body {
+  font-family: 'Proxima Nova', sans-serif;
+  color: var(--text-color);
+  font-size: 10px;
+  background-color: var(--background-color);                                              
+ }
+
  .container {
     box-sizing: border-box;
     margin: 10px 20px;
@@ -74,12 +91,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: black;
+    background-color: var(--main-color);
     padding: 0 20px;
   }
   
   nav a {
-    color: white;
+    color: var(--white-color);
     text-decoration: none;
   }
   
@@ -95,12 +112,12 @@
   
   .notice {
     background-color: green;
-    color: white;
+    color: var(--white-color);
   }
   
   .alert {
     background-color: red;
-    color: white;
+    color: var(--white-color);
   }
   
   input[type=email],
@@ -129,3 +146,67 @@
     justify-content: center;
     align-items: center;
   }
+
+  .centrialize img {
+  width: 90vw;
+  }
+
+  input[type=submit],
+  button {
+  background-color: var(--second-color);
+  color: var(--white-color);
+  border-color: var(--white-color);
+  padding: 5px;
+  }
+
+  a {
+    color: var(--second-color);
+  }
+
+.cat-card,
+.exchange-card {
+  background-color: var(--white-color);
+  height: 150px;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.exchange-card .line-1 {
+  display: flex;
+  column-gap: 10px;
+}
+
+.exchange-card .line-1 p:last-of-type {
+  font-weight: var(--bold-weight);
+}
+
+.cat-card img {
+  width: 50%;
+  height: 50%;
+  border-radius: 100%;
+}
+
+.cat-cards,
+.exchange-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.exchange-title {
+  width: 100%;
+  background-color: var(--white-color);
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.exchange-title p span {
+  font-weight: var(--bold-weight);
+}

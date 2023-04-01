@@ -4,14 +4,14 @@
   <% @group.exchanges.each do |exchange| %>
     <% amount = amount + exchange.amount %>
   <% end %>
-  <p>Total amount: <%= amount %></p>
+  <p>Total amount: <span><%= amount %> $<span></p>
 </div>
 <div class="exchange-body">
   <% @group.exchanges.each do |exchange| %>
     <div class="exchange-card">
       <div class="line-1">
         <p><%= exchange.name %></p>
-        <p>$<%= exchange.amount %></p>
+        <p><%= exchange.amount %>$</p>
       </div>
       <div class="line-2">
         <p><%= exchange.created_at %></p>
