@@ -1,3 +1,7 @@
+<div class="header">
+  <%= link_to "<", user_path(current_user) %>
+  <h2>Add a new category</h2>
+</div>
 <%= form_with model: group do |form| %>
   <div class="name">
     <%= form.text_field :name, placeholder: 'Name' %>
@@ -6,6 +10,7 @@
     <%= form.label :icon %><br>
     <%= form.file_field :icon %>
   </div>
-  <%= link_to "<", user_path(current_user), class: "nav-link" %>
-  <%= form.submit "Save" %>
+  <div class="buttons">
+    <%= form.submit "Save", class:"btn" %>
+  </div>
 <% end %>

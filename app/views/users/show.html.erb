@@ -1,4 +1,6 @@
-<h1>Categories:</h1>
+<div class="header">
+  <h2>Categories</h2>
+</div>
 <div class='cat-cards'>
 <% current_user.groups.each do |group| %>
   <div class='cat-card' onclick="seeTransactionsFunction(<%=@user.id%>, <%=group.id%>)">
@@ -13,7 +15,9 @@
   </div>
 <% end %>
 </div>
-<button onclick="createCategoryFunction()">Add a new category</button>
+<div class="buttons">
+<button onclick="createCategoryFunction()" class="btn">Add a new category</button>
+</div>
 <script>
   function seeTransactionsFunction(user_id, group_id) {
      window.location.href = '/user/' + user_id + '/transactions/' + group_id;

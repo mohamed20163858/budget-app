@@ -1,3 +1,7 @@
+<div class="header">
+  <%= link_to "<", user_path(current_user) %>
+  <h2>Transaction</h2>
+</div>
 <div class="exchange-title">
   <p>Name: <%= @group.name %></p>
   <% amount = 0 %>
@@ -9,18 +13,26 @@
 <div class="exchange-body">
   <% @group.exchanges.each do |exchange| %>
     <div class="exchange-card">
-      <div class="line-1">
-        <p><%= exchange.name %></p>
-        <p><%= exchange.amount %>$</p>
+      <div class="exchange-img">
+        <%= image_tag url_for(@group.icon) if @group.icon.attached? %>
+        <%= image_tag "default.png" unless @group.icon.attached? %>
       </div>
-      <div class="line-2">
-        <p><%= exchange.created_at %></p>
+      <div class="exchange-details">
+        <div class="line-1">
+          <p><%= exchange.name %></p>
+          <p>$<%= exchange.amount %></p>
+        </div>
+        <div class="line-2">
+          <p><%= exchange.created_at.strftime("%e %B %Y at %l:%M %p") %></p>
+        </div>
       </div>
     </div>
   <% end %>
 </div>
-<%= link_to "<", user_path(current_user), class: "nav-link" %>
-<button onclick="createTransactionFunction(<%=@group.id%>)">Add a new transaction</button>
+
+<div class="buttons">
+<button onclick="createTransactionFunction(<%=@group.id%>)" class="btn">Add a new transaction</button>
+</div>
 <script>
 function createTransactionFunction(id) {
     window.location.href = "/transactions/new/" + id

@@ -12,11 +12,11 @@
   </head>
 
   <body>
-    <%= render 'navagation_bar/nav'%>
+    <% if user_signed_in? %>
+    <!--<%= render 'navagation_bar/nav'%> -->
+    <% end %>
     <p class="notice"><%= notice if notice %></p>
     <p class="alert"><%= alert if alert %></p>
-    <div class="container">
-      <%= yield %>
-    </div>
+    <%= yield %>
   </body>
 </html>
