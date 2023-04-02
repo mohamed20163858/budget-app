@@ -65,11 +65,7 @@
 
 ## 🚀 Loom Video <a name="live-demo"></a>
 
-- [video](https://www.loom.com/share/fb1c886faf8f4b178339eb4502932875)
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-- [Demo](https://propay.onrender.com/)
+- [video](https://www.loom.com/share/6e7f7b2a8f414f2283781a60cfd76f52)
 
 <p align="right">([back to top](#readme-top))</p>
 
