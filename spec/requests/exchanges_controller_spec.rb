@@ -7,7 +7,7 @@ RSpec.describe 'Categories management', type: :request do
   let(:group) do
     Group.create(name: 'Gift Credit', author: user)
   end
-  let(:exchange) do 
+  let(:exchange) do
     Exchange.create(name: 'mac fastfood', author: user, amount: 30)
   end
   before do
@@ -37,7 +37,6 @@ RSpec.describe 'Categories management', type: :request do
   end
   it 'test the content of Transactions page' do
     get "/user/#{user.id}/transactions/#{group.id}"
-    expect(response.body).to include('Name: '+ group.name)
+    expect(response.body).to include("Name: #{group.name}")
   end
-  
 end

@@ -22,5 +22,4 @@ RSpec.describe 'Categories management', type: :request do
     get '/categories/new'
     expect(response.body).to include('Add a new category')
   end
-  
 end

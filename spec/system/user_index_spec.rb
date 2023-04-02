@@ -20,7 +20,7 @@ RSpec.describe 'User index page Capybara integration test', type: :system do
     sign_in @me
     visit root_path
     sleep(1)
-    expect(page).to have_css("img")
+    expect(page).to have_css('img')
   end
   it 'test redirecting to home page' do
     sign_in @me

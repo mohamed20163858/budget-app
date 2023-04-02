@@ -22,20 +22,20 @@ RSpec.describe 'User show page Capybara integration test', type: :system do
     sign_in @me
     visit user_path(@me)
     sleep(1)
-    expect(page).to have_content('Name: ' + @cat1.name)
+    expect(page).to have_content("Name: #{@cat1.name}")
   end
 
   it 'test seeing the category total amount' do
     sign_in @me
     visit user_path(@me)
     sleep(1)
-    expect(page).to have_content('Total amount: ' + (@exchange1.amount + @exchange2.amount).to_s)
+    expect(page).to have_content("Total amount: #{@exchange1.amount + @exchange2.amount}")
   end
   it 'test seeing the category icon' do
     sign_in @me
     visit user_path(@me)
     sleep(1)
-    expect(page).to have_css("img")
+    expect(page).to have_css('img')
   end
   it 'test clicking on Add a new category button' do
     sign_in @me

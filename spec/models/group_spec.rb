@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Group, type: :model do
   # tests go here
-  before :all do 
+  before :all do
     Exchange.destroy_all
     Group.destroy_all
     User.destroy_all

@@ -16,21 +16,21 @@ RSpec.describe 'Exchange show page Capybara integration test', type: :system do
     sign_in @me
     visit "/user/#{@me.id}/transactions/#{@cat1.id}"
     sleep(1)
-    expect(page).to have_content('Name: '+ @cat1.name)
+    expect(page).to have_content("Name: #{@cat1.name}")
   end
-  
+
   it 'test seeing the category total amount' do
     sign_in @me
     visit "/user/#{@me.id}/transactions/#{@cat1.id}"
     sleep(1)
-    expect(page).to have_content('Total amount: ' + (@exchange1.amount + @exchange2.amount).to_s)
+    expect(page).to have_content("Total amount: #{@exchange1.amount + @exchange2.amount}")
   end
   it 'test clicking on Add a new transaction button' do
     sign_in @me
     visit "/user/#{@me.id}/transactions/#{@cat1.id}"
     page.find_all('button')[0].click
     sleep(1)
-    expect(page).to have_current_path('/transactions/new/' + @cat1.id.to_s)
+    expect(page).to have_current_path("/transactions/new/#{@cat1.id}")
   end
 
   it 'test clicking on back button' do
