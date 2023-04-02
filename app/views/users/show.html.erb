@@ -1,3 +1,4 @@
+<h1>Categories:</h1>
 <div class='cat-cards'>
 <% current_user.groups.each do |group| %>
   <div class='cat-card' onclick="seeTransactionsFunction(<%=@user.id%>, <%=group.id%>)">
