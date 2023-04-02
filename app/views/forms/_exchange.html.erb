@@ -19,6 +19,6 @@
       <% end %>
     <% end %>
   </div>
-  <%= link_to "<", user_path(current_user), class: "nav-link" %>
+  <%= link_to "<", "/user/#{current_user.id}/transactions/#{@group.id}", class: "nav-link" %>
   <%= form.submit "Save" %>
 <% end %>

@@ -17,9 +17,11 @@ class ExchangesController < ApplicationController
         main_group = Group.find_by(id: params[:group_id].to_i)
         @exchange.groups.append(main_group) unless @exchange.groups.include?(main_group)
         group_ids = params[:group_ids]
-        group_ids.each do |group_id| 
-          group = Group.find_by(id: group_id.to_i)
-          @exchange.groups.append(group) unless @exchange.groups.include?(group)
+        if group_ids 
+          group_ids.each do |group_id| 
+            group = Group.find_by(id: group_id.to_i)
+            @exchange.groups.append(group) unless @exchange.groups.include?(group)
+          end
         end
         respond_to do |format|
           if @exchange.save
