@@ -1,5 +1,6 @@
 <div class="header">
   <h2>Categories</h2>
+  <i class="fa-solid fa-bars" onclick="redirectToMenu()"></i>
 </div>
 <div class='cat-cards'>
 <% current_user.groups.each do |group| %>
@@ -24,5 +25,8 @@
   }
   function createCategoryFunction() {
     window.location.href = "/categories/new"
+  }
+  function redirectToMenu() {
+     window.location.href = "/menu"
   }
 </script>

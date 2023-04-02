@@ -280,3 +280,20 @@ textarea {
   width: 90%;
   text-align: center;
 }
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu a {
+  text-decoration: none;
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: var(--text-color);
+}
+
+i {
+  padding-right: 10px;
+}

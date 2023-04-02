@@ -1,11 +1,20 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<div class="header">
+  <%= link_to "<", user_path(current_user), class:"nav-link" %>
+  <h2>Edit <%= resource_name.to_s.humanize %></h2>
+  <i class="fa-solid fa-bars" onclick="redirectToMenu()"></i>
+</div>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
+  
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+  </div>
 
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email",  disabled: "disabled" %>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -41,3 +50,8 @@
 <div>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete %></div>
 
 <%= link_to "Back", :back %>
+<script>
+function redirectToMenu() {
+     window.location.href = "/menu"
+  }
+</script>

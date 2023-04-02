@@ -1,6 +1,7 @@
 <div class="header">
   <%= link_to "<", user_path(current_user), class:"nav-link" %>
   <h2>Transaction</h2>
+  <i class="fa-solid fa-bars" onclick="redirectToMenu()"></i>
 </div>
 <div class="exchange-title">
   <p>Name: <%= @group.name %></p>
@@ -37,5 +38,7 @@
 function createTransactionFunction(id) {
     window.location.href = "/transactions/new/" + id
   }
+  function redirectToMenu() {
+     window.location.href = "/menu"
+  }
 </script>
-
