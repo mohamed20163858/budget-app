@@ -1,5 +1,5 @@
 <div class="header">
-  <%= link_to "<", "/user/#{current_user.id}/transactions/#{@group.id}"%>
+  <%= link_to "<", "/user/#{current_user.id}/transactions/#{@group.id}", class:"nav-link"%>
   <h2>Add a new transaction</h2>
 </div>
 <%= form_with model: exchange do |form| %>

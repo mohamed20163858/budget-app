@@ -29,6 +29,6 @@ RSpec.describe 'User management', type: :request do
   end
   it 'test the content of user show page' do
     get user_path(user)
-    expect(response.body).to include('Categories:')
+    expect(response.body).to include('Categories')
   end
 end

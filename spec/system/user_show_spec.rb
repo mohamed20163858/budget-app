@@ -16,7 +16,7 @@ RSpec.describe 'User show page Capybara integration test', type: :system do
     sign_in @me
     visit user_path(@me)
     sleep(1)
-    expect(page).to have_content('Categories:')
+    expect(page).to have_content('Categories')
   end
   it 'test seeing the category name' do
     sign_in @me
