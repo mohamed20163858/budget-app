@@ -1,42 +1,140 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![Microverse](https://img.shields.io/badge/Microverse-blueviolet) ![Ruby on Rails](https://img.shields.io/badge/-Ruby%20on%20rails-blueviolet)
+<img src="https://img.shields.io/badge/rails-%23CC0000.svg?style=for-the-badge&logo=ruby-on-rails&logoColor=white" alt="ruby" height="auto" />
 
-Things you may want to cover:
+<div align="center">
+  <h1><b>Nazmaly</b></h1>
+  <a name='readme-top'></a>
+</div>
 
-* Ruby version
+# 📗 Table of Contents
 
-* System dependencies
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+  - [🚀 Loom Video](#live-demo)
+  - [🚀 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#triangular_flag_on_post-deployment)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [❓ FAQ](#faq)
+- [📝 License](#license)
 
-* Configuration
+# 📖 Blog Rails project <a name="about-project"></a>
 
-* Database creation
+> Welcome to Nazmaly, the ultimate money transaction app for professionals. With Nazmaly, you can easily and securely manage all your financial transactions in one place. Our user-friendly interface and advanced security features make it simple and safe to send and receive payments, view transaction history, and manage your digital wallet.
 
-* Database initialization
+## 🛠 Built With <a name="built-with"></a>
 
-* How to run the test suite
+### Tech Stack <a name="tech-stack"></a>
 
-* Services (job queues, cache servers, search engines, etc.)
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://www.ruby-lang.org/en/">Ruby</a></li>
+    <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
+    <li><a href="https://www.w3schools.com/css/">CSS</a></li>
+    <li><a href="https://www.w3schools.com/html/">HTML</a></li>
+  </ul>
 
-* Deployment instructions
+</details>
 
-* ...
+<details>
+<summary>Database</summary>
+  <ul>
+    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+  </ul>
+</details>
 
-# Commands used to generate the schema 
-- first i generate the nessarry models using these commands
-'''
-rails g model User name:string
-rails g model Exchange name:string amount:integer user:references:index
-rails g model Group name:string icon:text user:references:index
-rails g model GroupExchangeRelation group:references:index exchange:references:index
+### Key Features <a name="key-features"></a>
 
-'''
-- secondly i updated the `user_id` inside groups and exchanges `author_id` by running this command ` rails g migration ChangeForeignKeyForGroupAndExchange` and edit the generated rb file by appending these lines of codes inside change method 
+- **Add comments**
+- **Like Posts**
+
+<p align="right">([back to top](#readme-top))</p>
+
+## 🚀 Loom Video <a name="live-demo"></a>
+
+- [video](https://www.loom.com/share/fb1c886faf8f4b178339eb4502932875)
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Demo](https://propay.onrender.com/)
+
+<p align="right">([back to top](#readme-top))</p>
+
+## 💻 Getting Started <a name="getting-started"></a>
+
+Clone project
+
+```bash
+git clone https://github.com/mohamed20163858/budget-app.git
 ```
-    rename_column :groups, :user_id, :author_id
-    rename_column :exchanges, :user_id, :author_id 
-``` 
-and here is the screen shoot of the ERD
-![image](https://user-images.githubusercontent.com/22921170/228896608-795798d5-bf75-4f10-8d80-b9ca71a30a18.png)
 
+cd budget-app
+```
+
+Run the program
+
+```bash
+rails s
+```
+
+[back to top](#readme-top)
+
+
+## 👥 Authors <a name="authors"></a>
+
+👤 **Mohamed Abd Elmohsen Saleh**
+
+- GitHub: [@mohamed20163858](https://github.com/mohamed20163858)
+- Twitter: [@mohamed20163858](https://twitter.com/mohamed20163858)
+- LinkedIn: [mohamed-mohsen-685a4995](https://www.linkedin.com/in/mohamedmohsensaleh/)
+
+
+
+
+<p align="right">([back to top](#readme-top))</p>
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- [ ] **More methods**
+
+[back to top](#readme-top)
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/mohamed20163858/budget-app/issues).
+
+[back to top](#readme-top)
+
+## ⭐️ Show your support <a name="support"></a>
+
+If you like this project please give it a star 😁🌟
+
+[back to top](#readme-top)
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+Microverse.
+[back to top](#readme-top)
+
+Original design idea by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella).
+
+## 📝 License <a name="license" href="MIT.md" ></a>
+
+This project is <a href="MIT.md" target="_blank">MIT</a> licensed. 
+
+[back to top](#readme-top)
