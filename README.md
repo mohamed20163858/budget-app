@@ -69,7 +69,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Demo](https://propay.onrender.com/)
+- [Demo](https://nazamly.onrender.com/)
 
 
 <p align="right">([back to top](#readme-top))</p>
