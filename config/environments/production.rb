@@ -22,7 +22,8 @@ Rails.application.configure do
 
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
-  config.public_file_server.enabled = ENV["RAILS_SERVE_STATIC_FILES"].present?
+  #config.public_file_server.enabled = ENV["RAILS_SERVE_STATIC_FILES"].present?
+  config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present? || ENV['RENDER'].present?
 
   # Compress CSS using a preprocessor.
   # config.assets.css_compressor = :sass
@@ -90,4 +91,17 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  ######
+   # need changes below for deployment
+  #######
+
+  #asuming using amazon s3 services 
+  #config.active_storage.service = :amazon
+  #config.aws_bucket = ENV['S3_BUCKET_NAME']
+  #config.aws_access_key_id = ENV['AWS_ACCESS_KEY_ID']
+  #config.aws_secret_access_key = ENV['AWS_SECRET_ACCESS_KEY']
+
+  #for production
+  #config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 end
